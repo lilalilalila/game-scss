@@ -135,6 +135,12 @@ body {
                 padding: 28% 21%;
                 font-size: 1.1rem;
                 background-color: $block-bg;
+                
+                @media screen and (min-width: 400px) {
+                    & {
+                      font-size: 1.3rem;  
+                    }
+                }
             }
             
             small {

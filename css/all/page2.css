@@ -156,7 +156,7 @@ a {
 
 .main-bottom > div > div small {
   float: right;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #d5d5d5;
 }
 
@@ -169,6 +169,10 @@ a {
 .main-bottom > div p {
   font-size: 1rem;
   color: #a6a6a6;
+}
+
+.main-content {
+  margin-bottom: 80px;
 }
 
 .footer {
