@@ -1,0 +1,33 @@
+
+@mixin between {
+    font-size:0;
+    letter-spacing:-0.5em;
+    text-align:justify;
+    text-justify:distribute-all-lines; /* for ie */
+   
+    width:302px;
+    margin:100px auto;
+    padding:0 13px;
+    border:2px solid #ccc;
+    background:#f0f0f0;
+    
+    &:after {
+        content:"";
+        height:0;
+        width:100%;
+        display:inline-block;
+        overflow:hidden;
+    }
+    
+    li {
+        display:inline-block;
+        vertical-align:top;
+        letter-spacing:normal;
+        *display:inline;
+        *zoom:1;
+        width:90px;
+        margin:13px 0;
+        height:120px;
+        background:#3b5998;
+    }
+}

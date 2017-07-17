@@ -1,0 +1,169 @@
+@import 'all/out/reset';
+@import 'all/canshu';
+@import 'all/header/header';
+@import 'all/out/bg-image';
+@import 'all/out/clear';
+
+body {
+    overflow-x: hidden;
+    height: 661px;
+}
+
+.main-hidden {
+    display: none;
+    width: 80%;
+    background-color: $white;
+    position: absolute;
+    top: 0;
+    
+    li {
+        width: 100%;
+        line-height: 3rem;
+        border-bottom: 1px solid $jieguo-hui;
+        background-image: url(../img/3f108638-a9ca-4218-a528-a83d2e2200f0_05.png);
+        @include bg-img($bg-s-x: 16px,
+                        $bg-s-y: 22px,
+                        $bg-p: 90%);
+        
+        img {
+            width: 24px;    
+            height: 24px;
+            vertical-align: middle;
+            margin: -5px 15px;
+        }
+        
+        a {
+            line-height: 3rem;
+            font-size: 1.3rem;
+            color: $header-blue;
+        }
+    }
+}
+
+    
+    .header {
+        display: block;
+        position: relative;
+        top: 0;
+        
+        .nav {
+            width: 34px;
+            height: 27px;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+    }
+    
+    
+  
+    
+    
+    .main {
+        padding: 2% 0 5% 0;
+        width: 100%;
+        background-color: $bg-color;
+        overflow: hidden;
+        border: 1px solid #cecece;
+        position: relative;
+        top: 0;
+        
+        .main-top {
+            width: 95%;
+            line-height: 4rem;
+            margin-bottom: 2%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            
+            border: 1px solid #cecece;
+            color: $font-hui;
+            background-color: $white;
+            
+            a {
+                color: $font-hui;
+                font-size: 1.3rem;
+            }
+        }
+        
+        .main-bottom {
+            @extend .main-top;
+            
+            h4 {
+                font-size: 1.3rem;
+                line-height: 4rem;
+                font-weight: 400;
+                color: $font-yellow;
+                border-bottom: 1px solid $border-yellow;
+            }
+            
+            .carousel {
+                position: relative;
+                
+                ol {
+                    position: absolute;
+                    left: 50%;
+                    bottom: 10px;
+                    width: 60px;
+                    margin-left: -25px;
+                    list-style: none;
+                    
+                    .active {
+                        background-color: $font-blue;
+                    }
+                    
+                    li {
+                        float: left;
+                        width: 10px;
+                        height: 10px;
+                        margin-right: 5px;
+                        border-radius: 100%;
+                        background-color: $bg-color;
+                    }
+                    
+                    &:after {
+                        @include clear-a;
+                    }
+                }
+                
+                .carousel-content {
+                    width: 100%;
+                    padding-bottom: 30px;
+                    background-image: url('../img/首页_11.png');
+                    @include bg-img(
+                        $bg-s-x: 28px,
+                        $bg-s-y: 55px,
+                        $bg-p: right);
+                    background-position: 99% 43%;
+                    
+                    p {
+                        line-height: 1rem;
+                    }
+                    
+                    .line {
+                        width: 80%;
+                        margin: 15px auto;
+                        line-height: 6rem;
+                        background-color: $font-blue;
+                        
+                        p {
+                            font-size: 1.3rem;
+                            line-height: 6rem;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+.header:hover .main-hidden {
+    display: block;
+}
+
+.header:hover + .main {
+    float: left;
+    left: 80%;
+}
+
+.header:hover .nav {
+    margin-left: 81.5%;
+}
